@@ -52,7 +52,7 @@
     >_ 172.16.0.0 - 172.31.255.255
     >_ 192.168.0.0 - 192.168.255.255
 * Public IP's are unique
-* Communication within the network of an company/ orgainisation is done via its private IP ( The IP you will see in the RUN dialoge box of your college System if it is conneceted via LAN)
+* Communication within the network of an company/ orgainisation is done via its private IP(The IP you will see in the RUN dialoge box of your college System if it is conneceted via LAN)
 * When the computer makes request to the Internet, the Public IP is used
 * Network Address Translation (NAT), where the router replaces the Private IP of the outgoing Packets with the Public IP so that the packet is routed throughout the internet
 * Subnetting, splitting the available possible networks to a smaller portion (dividing it into smaller sub-networks)
@@ -97,3 +97,22 @@
   >_   443 - HTTPS Protocol (Encrypted HTTP)
   >_   445 - SMB Protocol (Microsoft Active Directory)
   >_    xx - ICMP Protocol (Simple packets containing error messages)
+  
+  [+] OSI MODEL:
+  
+  * This layer is used in implementing the internet
+  * Has 7 Layers
+  * Application layer directly interfaces with the application and performs common application services
+  * Ports involved: POP, SMTP, HTTP, DNS, FTP etc..,
+  * Presentaion layer relives the Application layer regarding data differences for the end user actions like data encryption, decryption, translation takes place here
+  * Ports involved: NDR, LPP
+  * Session layer provides mechanism for end-user application process
+  * Ports involved: NetBIOS
+  * Transport layer provides end-to-end communication control
+  * Ports involved: TCP, UDP
+  * Network layer routes information accross the network
+  * Ports involved: IP, ARP, ICMP
+  * Data Link Layer links physical with Network layer has the MAC addressing
+  * Ports involved: MAC
+  * Physical layer has the information about the various communication media
+  * Devices like NIC and ethernet cables falls under this layer
