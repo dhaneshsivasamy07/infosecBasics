@@ -1,0 +1,27 @@
+[+] DOS:
+ 
+* Denial Of Service, DOS is a simple attack which floods the server and causes the legitimate users to temporarily deny its usage
+* In DOS, the server is simply flooded with 'n' number of requests than the server could handle
+* No intrusion , gaining access involved just taking down the service
+* Tools used: scripts written by 1337 hackers, LOIC, HIOC
+
+
+[+] BUFFER OVERFLOW:
+ 
+* A simple yet serious attack is the buffer overflow attack
+* In this type of attack, the buffer in the application is overwritten and the excess data is written into the memory leading serious casualities
+* The buffer space and data should be handled carefully to avoid these attacks
+
+
+[+] IP SPOOFING:
+
+* The IP address of the attacker is changed to a different IP
+* An attacker might spoof the attack packets IP in the Header to an IP that lies within the network exposing datas
+* Firewalls implementes in the network sometimes doesnt inspect the data packets which is coming inside from the network thus allowing access to the attacker
+
+
+[+] SESSION HIJACKING:
+
+* Hijacking the TCP session between two computers
+* Authentication only takes part at the connection, so the Hacker might interrupt and take over the session
+* Man In The Middle, MITM attack is the most common way of session hijacking
