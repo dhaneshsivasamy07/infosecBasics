@@ -98,7 +98,8 @@
   >_   445 - SMB Protocol (Microsoft Active Directory)
   >_    xx - ICMP Protocol (Simple packets containing error messages)
   
-  [+] OSI MODEL:
+
+[+] OSI MODEL:
   
   * This layer is used in implementing the internet
   * Has 7 Layers
@@ -116,3 +117,66 @@
   * Ports involved: MAC
   * Physical layer has the information about the various communication media
   * Devices like NIC and ethernet cables falls under this layer
+
+
+[+] FIREWALL:
+
+* A fence between the internal network of an organisation and the outside world (Internet)
+* Basically protects the internal network from being exploited
+* Filteration methods include Packet filtering, Stateful Packet Inspection Filtering, Client Application Auth & User Auth
+* Reads packet size, source IP address, protocol, and destination port of the incoming IP packet
+* Operating Systems home editions and server editions export with built in firewall to protect the network
+
+
+[+] PACKET FILTERING FIREWALL:
+
+* Most basic type of firewall, examines all incoming packets
+* Only the packets with specified criteria are allowed through the firewall and the one doesn't are blocked
+* Operating systems ship with this type of filtering
+* This firewall seperates the packets based upon the parameters of the incoming packet
+* Disadvantage: As this type of firewall dont compare the incoming packets with the previous one they are likely be affected by PING Flood / SYN Flood
+* Doesn't offer user authentication as it sees only the incoming packet header and has no information about the incoming packet
+* Establishing a Packet Filtering Firewall includes configuring which Protcols should be allowed, which source and destibation ports should be allowed, which source IP's should be allowed
+
+
+[+] STATEFUL PACKET INSPECTION FIREWALL:
+
+* Advanced version of Packet Filtering Firewall, allows the incoming packets based on the firewalls rules set
+* This type of firewall examines the data in the current incoming packet and the previous packet used in the conversation
+* Examining the packets make this firewall less vulnerable to Ping / SYN Flood and Spoofing attacks
+* Quality firewalls mostly uses the SPI method
+* Adviced to use this type of firewall, most home routers have the option for SPI method
+* SPI firewalls are quite common
+
+
+[+] APPLICATION GATEWAY:
+
+* Application gateway is a program that runs on a firewall
+* This type of firewall will examine the client application with the server-side application to which the appliciation is trying to connect, rather than examining the protocol and port of the packet
+* Allows the administrator to provide access to only certain applications
+* The connection from the client web client to the server is made via application gateway, the client negotiates with the server to connect to server
+* The proxy establishes the connection on behalf of client thus hiding/ protecting other computers in the network behind the firewall
+* Connection Syntax:
+      >_ Client to Proxy
+      >_ Proxy to Server
+* The packets are inspected at the proxy and forwards the packets
+* Each client requires a unique program to make the connection and communicate with the server
+* Provides User Authentication and is used to avoid unwanted incoming packets
+* Disadvantage: As it requires an application, consumption of both CPU and MEMORY Usage will be high
+* Vulnerable to SYN & PING Flood 
+* Requires authentication of both client and server to authenticate thus multiple requests might cause the firewall to operate numb and prevent legitimate users from accessing
+* A user can send huge number of requests directly to the server thus flooding and preventing access to legitimate users
+
+
+[+] CIRCUIT LEVEL GATEWAY:
+
+* Similar to application level gateway in a more secured way and are generally implemented in high end equipments
+* User authentication is employed but they are done in an earlier process
+* The client application is checked if the access should be granted and the user is authenticated
+* Authenticating the users is the first step, the LogOn Id and password is first checked and then the access to the router is established
+* The entered IP / Username is first verified before establishing each connection
+* Once the connection is made, the bytes are transmitted from the source to the client
+* A virtual circuit exists b/w the server and the proxy server
+* The request from the internet goes through this proxy server and the response is recieved through the circuit to the internet after changing the IP address
+* Only the IP of the proxy server is seen by the external users
+* External systems never see the internal systems by this firewall
