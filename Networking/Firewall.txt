@@ -67,6 +67,36 @@
 * Understanding the firewall is necessary to know what it allows and what it blocks
 * Type of implementation:
       >_ Network Host Based
-      >_ 
-      >_
-      >_
+      >_ Dual Homed Host
+      >_ Router Based Firewall
+      >_ Screened Host
+
+
+[+] HOST BASED FIREWALL:
+
+* This is a type of firewall that is installed via a software on the existing system with its OS
+* The machine implemented with this type of firewall should have hardened OS
+* Hardening OS refers to:
+      >_ Patching up-to-date
+      >_ Uninstalling un-used / un-wanted utilities
+      >_ Closing unused ports
+* Installation of applicaion is done in the server, or a server may ship with it
+* Cost efficient
+* WorkFlow:
+      >_ firewall installed on a linux system
+      >_ You have a server to protect
+      >_ Using the firewall implemented system as a firewall 
+      
+      
+[+] DUAL HOMED HOST:
+
+* Firewall running on a server with atleast two NIC's
+* Server acts as a router b/w the network and to the interface which it is attached
+* The IP packet from the network is not directly forwarded to the network, since auutomatic routing function is disabled
+* The routing path and packets are configured by the SysAdmins
+* Depends on the security of the underlying OS
+
+
+[+] ROUTER BASED FIREWALL:
+
+* 
