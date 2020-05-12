@@ -1,0 +1,14 @@
+[+] INTRODUCTION:
+
+* ECB is an authentication mechanism in PHP based applications
+* The entered message is splitted into blocks of X byte lengths
+* Each block is encrypted seperately using a key
+* Encryption Flow:
+    >_ Plain text -> Block Cipher Encryption with a key -> Ciphered Output
+* The ECB had the major secuurity implications
+    >_ The ciphered blocks can be removed / moved without disturbing the encryption process
+
+
+[+] VULNERABILITY:
+
+* The cookie should be unique each time you login to an account
